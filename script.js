@@ -13,56 +13,56 @@
   let uid = 0;
   const art = {
     box: (c, u = ++uid) => `
-      <svg viewBox="0 0 200 200"><defs><linearGradient id="g${u}" x1="0" x2="1"><stop offset="0" stop-color="#9c7a3c"/><stop offset=".5" stop-color="#f3dfa8"/><stop offset="1" stop-color="#9c7a3c"/></linearGradient></defs>
+      <svg viewBox="0 0 200 200"><defs><linearGradient id="g${u}" x1="0" x2="1"><stop offset="0" stop-color="#5b3a8a"/><stop offset=".5" stop-color="#d9c6f0"/><stop offset="1" stop-color="#5b3a8a"/></linearGradient></defs>
       <rect x="35" y="80" width="130" height="100" rx="4" fill="${c}"/>
       <rect x="28" y="62" width="144" height="28" rx="4" fill="${c}" stroke="rgba(255,255,255,.08)"/>
       <rect x="92" y="62" width="16" height="118" fill="url(#g${u})"/>
       <path d="M100 62c-20-30-48-22-40-6 6 10 26 8 40 6zm0 0c20-30 48-22 40-6-6 10-26 8-40 6z" fill="none" stroke="url(#g${u})" stroke-width="7" stroke-linejoin="round"/>
       <rect x="35" y="90" width="130" height="6" fill="rgba(0,0,0,.25)"/></svg>`,
     perfume: (c, u = ++uid) => `
-      <svg viewBox="0 0 200 200"><defs><linearGradient id="p${u}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4d1" stop-opacity=".6"/><stop offset=".4" stop-color="${c}"/><stop offset="1" stop-color="#1a120a"/></linearGradient></defs>
-      <rect x="84" y="22" width="32" height="26" rx="3" fill="#d4af6a"/><rect x="80" y="44" width="40" height="10" fill="#9c7a3c"/>
-      <path d="M58 70q0-16 16-16h52q16 0 16 16v92q0 18-18 18H76q-18 0-18-18z" fill="url(#p${u})" stroke="#f3dfa8" stroke-opacity=".5"/>
-      <rect x="72" y="104" width="56" height="34" rx="2" fill="none" stroke="#f3dfa8" stroke-width="1.5"/>
-      <text x="100" y="126" text-anchor="middle" font-family="Cinzel" font-size="13" fill="#f3dfa8">MATCHI</text>
+      <svg viewBox="0 0 200 200"><defs><linearGradient id="p${u}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".6"/><stop offset=".4" stop-color="${c}"/><stop offset="1" stop-color="#3d2363"/></linearGradient></defs>
+      <rect x="84" y="22" width="32" height="26" rx="3" fill="#8b5cc4"/><rect x="80" y="44" width="40" height="10" fill="#5b3a8a"/>
+      <path d="M58 70q0-16 16-16h52q16 0 16 16v92q0 18-18 18H76q-18 0-18-18z" fill="url(#p${u})" stroke="#d9c6f0" stroke-opacity=".5"/>
+      <rect x="72" y="104" width="56" height="34" rx="2" fill="none" stroke="#d9c6f0" stroke-width="1.5"/>
+      <text x="100" y="126" text-anchor="middle" font-family="Cinzel" font-size="13" fill="#d9c6f0">MATCHI</text>
       <path d="M66 70v80" stroke="#fff" stroke-opacity=".25" stroke-width="5" stroke-linecap="round"/></svg>`,
     rose: (c, u = ++uid) => `
-      <svg viewBox="0 0 200 200"><path d="M70 120h60l-8 60H78z" fill="#1b1510" stroke="#d4af6a"/>
+      <svg viewBox="0 0 200 200"><path d="M70 120h60l-8 60H78z" fill="#ffffff" stroke="#8b5cc4"/>
       <path d="M100 120V86" stroke="#2f5a32" stroke-width="4"/><path d="M100 104q-18-4-22-18 16 0 22 18z" fill="#2f5a32"/>
       <g fill="${c}"><circle cx="100" cy="60" r="30"/></g>
       <g fill="none" stroke="rgba(0,0,0,.35)" stroke-width="2"><path d="M86 52q14-16 28 0"/><path d="M80 64q20 18 40 0"/><path d="M94 58q6-8 12 0q-6 8-12 0"/></g>
-      <circle cx="90" cy="48" r="8" fill="#fff" fill-opacity=".15"/><path d="M70 120h60" stroke="#f3dfa8" stroke-width="3"/></svg>`,
+      <circle cx="90" cy="48" r="8" fill="#fff" fill-opacity=".15"/><path d="M70 120h60" stroke="#d9c6f0" stroke-width="3"/></svg>`,
     watch: (c, u = ++uid) => `
       <svg viewBox="0 0 200 200"><rect x="78" y="10" width="44" height="60" rx="8" fill="${c}"/><rect x="78" y="130" width="44" height="60" rx="8" fill="${c}"/>
-      <circle cx="100" cy="100" r="48" fill="#d4af6a"/><circle cx="100" cy="100" r="40" fill="#0e0b08" stroke="#f3dfa8" stroke-width="2"/>
-      <g stroke="#f3dfa8" stroke-width="2"><path d="M100 64v7M100 129v7M64 100h7M129 100h7"/></g>
-      <path d="M100 100V76M100 100l16 10" stroke="#f3dfa8" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="100" r="3" fill="#f3dfa8"/>
-      <rect x="146" y="94" width="8" height="12" rx="2" fill="#9c7a3c"/></svg>`,
+      <circle cx="100" cy="100" r="48" fill="#8b5cc4"/><circle cx="100" cy="100" r="40" fill="#3d2363" stroke="#d9c6f0" stroke-width="2"/>
+      <g stroke="#d9c6f0" stroke-width="2"><path d="M100 64v7M100 129v7M64 100h7M129 100h7"/></g>
+      <path d="M100 100V76M100 100l16 10" stroke="#d9c6f0" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="100" r="3" fill="#d9c6f0"/>
+      <rect x="146" y="94" width="8" height="12" rx="2" fill="#5b3a8a"/></svg>`,
     candle: (c, u = ++uid) => `
-      <svg viewBox="0 0 200 200"><defs><radialGradient id="f${u}"><stop offset="0" stop-color="#fff4d1"/><stop offset=".6" stop-color="#f3b54a"/><stop offset="1" stop-color="#f3b54a" stop-opacity="0"/></radialGradient></defs>
+      <svg viewBox="0 0 200 200"><defs><radialGradient id="f${u}"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f3b54a"/><stop offset="1" stop-color="#f3b54a" stop-opacity="0"/></radialGradient></defs>
       <circle cx="100" cy="56" r="36" fill="url(#f${u})" opacity=".55"/>
       <path d="M100 40q12 16 0 30q-12-14 0-30z" fill="#ffe7a8"/><path d="M100 70v10" stroke="#222" stroke-width="2"/>
-      <rect x="60" y="80" width="80" height="96" rx="10" fill="${c}" stroke="#d4af6a" stroke-width="2"/>
+      <rect x="60" y="80" width="80" height="96" rx="10" fill="${c}" stroke="#8b5cc4" stroke-width="2"/>
       <ellipse cx="100" cy="82" rx="40" ry="6" fill="rgba(255,255,255,.12)"/>
-      <rect x="60" y="120" width="80" height="22" fill="#d4af6a"/><text x="100" y="136" text-anchor="middle" font-family="Cinzel" font-size="11" fill="#1b1510">OUD · AMBER</text></svg>`,
+      <rect x="60" y="120" width="80" height="22" fill="#8b5cc4"/><text x="100" y="136" text-anchor="middle" font-family="Cinzel" font-size="11" fill="#ffffff">OUD · AMBER</text></svg>`,
     ring: (c, u = ++uid) => `
-      <svg viewBox="0 0 200 200"><path d="M40 120h120v56H40z" fill="${c}"/><path d="M40 120l14-30h92l14 30z" fill="#2a2119"/>
-      <rect x="40" y="120" width="120" height="6" fill="#d4af6a"/><ellipse cx="100" cy="122" rx="40" ry="8" fill="#0a0806"/>
-      <circle cx="100" cy="104" r="20" fill="none" stroke="#f3dfa8" stroke-width="6"/>
+      <svg viewBox="0 0 200 200"><path d="M40 120h120v56H40z" fill="${c}"/><path d="M40 120l14-30h92l14 30z" fill="#e6dbf5"/>
+      <rect x="40" y="120" width="120" height="6" fill="#8b5cc4"/><ellipse cx="100" cy="122" rx="40" ry="8" fill="#3d2363"/>
+      <circle cx="100" cy="104" r="20" fill="none" stroke="#d9c6f0" stroke-width="6"/>
       <path d="M100 66l12 12-12 14-12-14z" fill="#e8f4ff" stroke="#fff"/><path d="M88 78h24" stroke="#9fc6e6"/></svg>`,
   };
 
   const products = [
-    { id: "velvet", name: "صندوق المخمل", desc: "تشكيلة شوكولاتة وورد مجفف", price: 420, cat: "her", tag: "الأكثر طلباً", art: "box", color: "#5a1220", tint: "rgba(160,40,60,.35)" },
-    { id: "oud", name: "عطر ليلة العود", desc: "عطر شرقي فاخر ١٠٠ مل", price: 650, cat: "him", tag: "حصري", art: "perfume", color: "#6b3d14", tint: "rgba(212,140,60,.3)" },
-    { id: "eternal", name: "الوردة الأبدية", desc: "وردة طبيعية تدوم ٣ سنوات", price: 380, cat: "her", tag: "رومانسي", art: "rose", color: "#b3202f", tint: "rgba(200,40,60,.35)" },
-    { id: "chrono", name: "ساعة الزمن الذهبي", desc: "ساعة كلاسيكية مع نقش الاسم", price: 1250, cat: "him", tag: "إصدار محدود", art: "watch", color: "#1b1510", tint: "rgba(212,175,106,.3)" },
-    { id: "amber", name: "شمعة العنبر", desc: "شمعة يدوية برائحة العود والعنبر", price: 190, cat: "occasion", tag: "جديد", art: "candle", color: "#1f1712", tint: "rgba(243,181,74,.3)" },
-    { id: "diamond", name: "علبة الوعد", desc: "خاتم فضة مطلي بالذهب", price: 980, cat: "her", tag: "للخطوبة", art: "ring", color: "#3a0a14", tint: "rgba(159,198,230,.25)" },
-    { id: "noir", name: "صندوق نوار", desc: "قهوة مختصة وأدوات تقديم فاخرة", price: 540, cat: "him", tag: "للرجل", art: "box", color: "#14110e", tint: "rgba(212,175,106,.25)" },
-    { id: "celebrate", name: "صندوق الاحتفال", desc: "مثالي للتخرج والمناسبات", price: 460, cat: "occasion", tag: "مناسبات", art: "box", color: "#123a2c", tint: "rgba(60,160,120,.28)" },
+    { id: "velvet", name: "صندوق المخمل", desc: "تشكيلة شوكولاتة وورد مجفف", price: 420, cat: "her", tag: "الأكثر طلباً", art: "box", color: "#9b6fd6", tint: "rgba(180,142,224,.4)" },
+    { id: "oud", name: "عطر ليلة العود", desc: "عطر شرقي فاخر ١٠٠ مل", price: 650, cat: "him", tag: "حصري", art: "perfume", color: "#7d4fb8", tint: "rgba(201,168,240,.45)" },
+    { id: "eternal", name: "الوردة الأبدية", desc: "وردة طبيعية تدوم ٣ سنوات", price: 380, cat: "her", tag: "رومانسي", art: "rose", color: "#b48ee0", tint: "rgba(214,190,245,.5)" },
+    { id: "chrono", name: "ساعة الزمن الذهبي", desc: "ساعة كلاسيكية مع نقش الاسم", price: 1250, cat: "him", tag: "إصدار محدود", art: "watch", color: "#3d2363", tint: "rgba(139,92,196,.3)" },
+    { id: "amber", name: "شمعة العنبر", desc: "شمعة يدوية برائحة العود والعنبر", price: 190, cat: "occasion", tag: "جديد", art: "candle", color: "#f7f2fc", tint: "rgba(180,142,224,.35)" },
+    { id: "diamond", name: "علبة الوعد", desc: "خاتم فضة مطلي بالذهب", price: 980, cat: "her", tag: "للخطوبة", art: "ring", color: "#6b3fa0", tint: "rgba(201,168,240,.4)" },
+    { id: "noir", name: "صندوق نوار", desc: "قهوة مختصة وأدوات تقديم فاخرة", price: 540, cat: "him", tag: "للرجل", art: "box", color: "#ffffff", tint: "rgba(139,92,196,.3)" },
+    { id: "celebrate", name: "صندوق الاحتفال", desc: "مثالي للتخرج والمناسبات", price: 460, cat: "occasion", tag: "مناسبات", art: "box", color: "#c9a8f0", tint: "rgba(180,142,224,.4)" },
   ];
-  const signature = { id: "signature", name: "صندوق التوقيع", price: 890, art: "box", color: "#0e0b08", tint: "rgba(212,175,106,.35)" };
+  const signature = { id: "signature", name: "صندوق التوقيع", price: 890, art: "box", color: "#ffffff", tint: "rgba(139,92,196,.35)" };
   const catalog = Object.fromEntries([...products, signature].map((p) => [p.id, p]));
 
   /* ---------- Render products ---------- */
@@ -128,6 +128,30 @@
   }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
   $$(".reveal, .card, .finale").forEach((el) => io.observe(el));
   $$(".card").forEach((c, i) => (c.style.transitionDelay = `${(i % 4) * 0.1}s`));
+
+  /* ---------- Scroll-scrubbed background video ---------- */
+  const video = $("#bgVideo");
+  const videoSrc = video.canPlayType('video/mp4; codecs="avc1.640028"') ? video.dataset.mp4 : video.dataset.webm;
+  const primeVideo = () => video.play().then(() => video.pause()).catch(() => {}); // iOS renders seeked frames only after a play
+  // Load the whole file into memory so seeking while scrolling is instant
+  fetch(videoSrc)
+    .then((r) => (r.ok ? r.blob() : Promise.reject()))
+    .then((b) => { video.src = URL.createObjectURL(b); })
+    .catch(() => { video.src = videoSrc; }) // file:// or offline — stream instead
+    .finally(primeVideo);
+  let vTarget = 0, vCurrent = 0;
+  const scrollProgress = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    return max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+  };
+  (function scrub() {
+    if (video.duration) {
+      vTarget = scrollProgress() * (video.duration - 0.05);
+      vCurrent += (vTarget - vCurrent) * (reduceMotion ? 1 : 0.12);
+      if (Math.abs(video.currentTime - vCurrent) > 0.02 && !video.seeking) video.currentTime = vCurrent;
+    }
+    requestAnimationFrame(scrub);
+  })();
 
   /* ---------- Nav ---------- */
   const nav = $("#nav");
@@ -196,8 +220,8 @@
         if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
         const alpha = p.a * (0.6 + 0.4 * Math.sin(p.t));
         const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
-        g.addColorStop(0, `rgba(243,223,168,${alpha})`);
-        g.addColorStop(1, "rgba(212,175,106,0)");
+        g.addColorStop(0, `rgba(155,111,214,${alpha})`);
+        g.addColorStop(1, "rgba(139,92,196,0)");
         ctx.fillStyle = g;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2); ctx.fill();
       }
