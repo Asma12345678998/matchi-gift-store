@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ماتشي | MATCHI — تجربة هدايا فاخرة</title>
+  <meta name="description" content="ماتشي — متجر هدايا فاخر يحوّل كل هدية إلى مشهد سينمائي لا يُنسى." />
+  <meta name="theme-color" content="#0a0806" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;800&family=Reem+Kufi:wght@400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ===== Cinematic intro ===== -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__bar intro__bar--top"></div>
+    <div class="intro__bar intro__bar--bottom"></div>
+    <div class="intro__count" id="introCount">3</div>
+    <div class="intro__logo">
+      <span class="intro__en">MATCHI</span>
+      <span class="intro__ar">ماتشي</span>
+      <span class="intro__line"></span>
+      <span class="intro__tag">يقدّم</span>
+    </div>
+  </div>
+
+  <!-- Film grain + vignette overlays -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">
+      <span class="nav__mark">M</span>
+      <span class="nav__name">ماتشي</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#collections">المجموعات</a>
+      <a href="#story">قصتنا</a>
+      <a href="#signature">صندوق التوقيع</a>
+      <a href="#reviews">الآراء</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__cart" id="cartBtn" aria-label="سلة الهدايا">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h18l-1.5 11h-15z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg>
+        <span class="nav__badge" id="cartCount">0</span>
+      </button>
+      <button class="nav__burger" id="burger" aria-label="القائمة"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <canvas class="hero__particles" id="particles"></canvas>
+      <div class="hero__rays" aria-hidden="true"></div>
+      <div class="hero__spot" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">— عرض حصري · الموسم الأول —</p>
+        <h1 class="hero__title">
+          <span class="hero__word" data-split>كل هدية</span>
+          <span class="hero__word hero__word--gold" data-split>حكاية</span>
+          <span class="hero__word" data-split>تُروى</span>
+        </h1>
+        <p class="hero__sub reveal">في <strong>ماتشي</strong> لا نبيع الهدايا… نُخرج لحظات. كل صندوق مشهد، وكل شريطة بداية قصة لا تُنسى.</p>
+        <div class="hero__cta reveal">
+          <a href="#collections" class="btn btn--gold magnetic"><span>اكتشف المجموعة</span></a>
+          <a href="#story" class="btn btn--ghost magnetic">
+            <span class="btn__play"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M7 4v16l13-8z" fill="currentColor"/></svg></span>
+            <span>شاهد القصة</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__meta" aria-hidden="true">
+        <span>MATCHI PICTURES</span>
+        <span class="hero__meta-dot"></span>
+        <span>EST. 2026</span>
+      </div>
+      <a href="#collections" class="hero__scroll" aria-label="انتقل للأسفل">
+        <span>مرّر</span><i></i>
+      </a>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>تغليف يدوي فاخر</span><b>✦</b>
+        <span>توصيل في نفس اليوم</span><b>✦</b>
+        <span>بطاقات إهداء بخط اليد</span><b>✦</b>
+        <span>هدايا مخصّصة بالاسم</span><b>✦</b>
+        <span>LUXURY GIFTING</span><b>✦</b>
+        <span>تغليف يدوي فاخر</span><b>✦</b>
+        <span>توصيل في نفس اليوم</span><b>✦</b>
+        <span>بطاقات إهداء بخط اليد</span><b>✦</b>
+        <span>هدايا مخصّصة بالاسم</span><b>✦</b>
+        <span>LUXURY GIFTING</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ===== Collections ===== -->
+    <section class="section collections" id="collections">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 class="section__title reveal">المجموعات <em>الحصرية</em></h2>
+        <p class="section__lead reveal">اختر بطل قصتك. كل قطعة منتقاة بعناية لتليق بمن تحب.</p>
+      </div>
+
+      <div class="filters reveal" id="filters">
+        <button class="filter is-active" data-filter="all">الكل</button>
+        <button class="filter" data-filter="her">لها</button>
+        <button class="filter" data-filter="him">له</button>
+        <button class="filter" data-filter="occasion">مناسبات</button>
+      </div>
+
+      <div class="grid" id="productGrid"><!-- rendered by script.js --></div>
+    </section>
+
+    <!-- ===== Story (chapters) ===== -->
+    <section class="section story" id="story">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 class="section__title reveal">ثلاثة <em>مشاهد</em> لكل هدية</h2>
+      </div>
+
+      <div class="chapters">
+        <article class="chapter reveal">
+          <div class="chapter__frame"><span class="chapter__scene">SCENE I</span><div class="chapter__art chapter__art--1"></div></div>
+          <h3>الاختيار</h3>
+          <p>نصغي لقصتك أولاً، ثم ننتقي القطعة التي تعبّر عنها كأنها صُنعت لأجلها.</p>
+        </article>
+        <article class="chapter reveal">
+          <div class="chapter__frame"><span class="chapter__scene">SCENE II</span><div class="chapter__art chapter__art--2"></div></div>
+          <h3>الإخراج</h3>
+          <p>تغليف يدوي بأوراق مخملية وشرائط حريرية وختم شمعي يحمل توقيع ماتشي.</p>
+        </article>
+        <article class="chapter reveal">
+          <div class="chapter__frame"><span class="chapter__scene">SCENE III</span><div class="chapter__art chapter__art--3"></div></div>
+          <h3>اللحظة</h3>
+          <p>يصل صندوقك في موعده تماماً، لتبدأ اللقطة الأجمل: لحظة فتح الهدية.</p>
+        </article>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><b data-count="12000">0</b><span>هدية سُلّمت</span></div>
+        <div class="stat reveal"><b data-count="98">0</b><span>٪ نسبة الرضا</span></div>
+        <div class="stat reveal"><b data-count="24">0</b><span>ساعة توصيل</span></div>
+        <div class="stat reveal"><b data-count="350">0</b><span>تصميم حصري</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Signature box ===== -->
+    <section class="section signature" id="signature">
+      <div class="signature__inner">
+        <div class="signature__text">
+          <span class="section__num">03</span>
+          <h2 class="section__title reveal">صندوق <em>التوقيع</em></h2>
+          <p class="section__lead reveal">تحفتنا الأشهر. صندوق أسود مخملي بحواف ذهبية، يحتضن تشكيلة من العطور والشوكولاتة البلجيكية والشموع المعطّرة — مع بطاقة تكتبها أنت ونخطّها نحن.</p>
+          <ul class="signature__list reveal">
+            <li>عطر ماتشي الخاص ٥٠ مل</li>
+            <li>شوكولاتة بلجيكية مصنوعة يدوياً</li>
+            <li>شمعة عود وكهرمان</li>
+            <li>بطاقة بخط عربي أصيل</li>
+          </ul>
+          <div class="signature__price reveal"><span>٨٩٠</span> ر.س</div>
+          <button class="btn btn--gold magnetic reveal" data-add="signature"><span>أضف إلى السلة</span></button>
+        </div>
+
+        <div class="signature__stage" id="boxStage" aria-label="صندوق ماتشي — اضغط لفتحه">
+          <div class="box" id="giftBox">
+            <div class="box__lid">
+              <div class="box__face box__face--top"><span class="box__seal">M</span></div>
+              <div class="box__face box__face--front"></div>
+              <div class="box__face box__face--back"></div>
+              <div class="box__face box__face--right"></div>
+              <div class="box__face box__face--left"></div>
+            </div>
+            <div class="box__body">
+              <div class="box__face box__face--front"><i class="box__ribbon"></i></div>
+              <div class="box__face box__face--back"><i class="box__ribbon"></i></div>
+              <div class="box__face box__face--right"><i class="box__ribbon"></i></div>
+              <div class="box__face box__face--left"><i class="box__ribbon"></i></div>
+              <div class="box__face box__face--bottom"></div>
+            </div>
+            <div class="box__glow"></div>
+          </div>
+          <p class="signature__hint">اضغط لفتح الصندوق</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 class="section__title reveal">قالوا <em>عن ماتشي</em></h2>
+      </div>
+      <div class="reviews__slider" id="reviewsSlider">
+        <blockquote class="review is-active">
+          <div class="review__stars">★★★★★</div>
+          <p>"لحظة فتح الصندوق كانت كأنها مشهد من فيلم. زوجتي ما زالت تحتفظ بالصندوق حتى الآن."</p>
+          <cite>— عبدالله · الرياض</cite>
+        </blockquote>
+        <blockquote class="review">
+          <div class="review__stars">★★★★★</div>
+          <p>"التغليف وحده تحفة فنية. وصلت الهدية في نفس اليوم وبتفاصيل أدهشتني."</p>
+          <cite>— نورة · جدة</cite>
+        </blockquote>
+        <blockquote class="review">
+          <div class="review__stars">★★★★★</div>
+          <p>"أفخم تجربة إهداء جربتها. البطاقة المكتوبة بالخط العربي أبكت والدتي من الفرح."</p>
+          <cite>— فيصل · الدمام</cite>
+        </blockquote>
+        <div class="reviews__dots" id="reviewDots"></div>
+      </div>
+    </section>
+
+    <!-- ===== CTA / Contact ===== -->
+    <section class="section finale" id="contact">
+      <div class="finale__curtain finale__curtain--r" aria-hidden="true"></div>
+      <div class="finale__curtain finale__curtain--l" aria-hidden="true"></div>
+      <div class="finale__inner">
+        <p class="hero__eyebrow reveal">— المشهد الأخير —</p>
+        <h2 class="finale__title reveal">جاهز لصناعة <em>لحظتك؟</em></h2>
+        <p class="section__lead reveal">أخبرنا عن المناسبة، وسنتولى الإخراج بالكامل.</p>
+        <form class="finale__form reveal" id="contactForm">
+          <input type="text" name="name" placeholder="اسمك" required />
+          <input type="tel" name="phone" placeholder="رقم الجوال" required />
+          <select name="occasion" required>
+            <option value="" disabled selected>المناسبة</option>
+            <option>عيد ميلاد</option>
+            <option>ذكرى زواج</option>
+            <option>تخرّج</option>
+            <option>مولود جديد</option>
+            <option>هدية شركات</option>
+            <option>أخرى</option>
+          </select>
+          <button type="submit" class="btn btn--gold magnetic"><span>احجز لحظتك</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="footer__en">MATCHI</span>
+      <span class="footer__ar">ماتشي · هدايا فاخرة</span>
+    </div>
+    <div class="footer__links">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="TikTok">TikTok</a>
+      <a href="#" aria-label="Snapchat">Snapchat</a>
+      <a href="#" aria-label="WhatsApp">WhatsApp</a>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> ماتشي. جميع الحقوق محفوظة — إخراج بكل حب.</p>
+  </footer>
+
+  <!-- ===== Cart drawer ===== -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <h3>سلّة الهدايا</h3>
+        <button class="drawer__close" id="drawerClose" aria-label="إغلاق">×</button>
+      </div>
+      <ul class="drawer__list" id="cartList"></ul>
+      <div class="drawer__foot">
+        <div class="drawer__total"><span>الإجمالي</span><b id="cartTotal">٠ ر.س</b></div>
+        <button class="btn btn--gold btn--block" id="checkoutBtn"><span>إتمام الطلب</span></button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
